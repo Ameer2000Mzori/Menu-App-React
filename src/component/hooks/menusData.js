@@ -1,4 +1,4 @@
-const menusObjs = [
+export const menusObjs = [
   {
     category: 'vegetables',
     name: 'tomato',
