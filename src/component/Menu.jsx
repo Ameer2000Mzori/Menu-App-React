@@ -1,5 +1,6 @@
 import react, { useState } from 'react'
 import { menusObjs } from './hooks/menusData.js'
+import { buttonsData } from './hooks/buttonsData.js'
 const Menu = () => {
   const [items, setItems] = useState(menusObjs)
 
@@ -15,34 +16,17 @@ const Menu = () => {
     <>
       <div>
         <div>
-          <button
-            onClick={(e) => {
-              changeCategory(e.target.textContent)
-            }}
-          >
-            All
-          </button>
-          <button
-            onClick={(e) => {
-              changeCategory(e.target.textContent)
-            }}
-          >
-            Vegetables
-          </button>
-          <button
-            onClick={(e) => {
-              changeCategory(e.target.textContent)
-            }}
-          >
-            fruits
-          </button>
-          <button
-            onClick={(e) => {
-              changeCategory(e.target.textContent)
-            }}
-          >
-            grain
-          </button>
+          {buttonsData.map((button) => {
+            return (
+              <button
+                onClick={(e) => {
+                  changeCategory(e.target.textContent)
+                }}
+              >
+                {button.title}
+              </button>
+            )
+          })}
         </div>
         <div>
           {items.map((menu, index) => {
