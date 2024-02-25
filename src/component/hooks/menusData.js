@@ -1,6 +1,6 @@
 export const menusObjs = [
   {
-    category: 'vegetables',
+    category: 'Vegetables',
     name: 'tomato',
     price: 1,
   },
