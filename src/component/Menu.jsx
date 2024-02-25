@@ -14,19 +14,25 @@ const Menu = () => {
 
   return (
     <>
-      <div>
+      <div className="flex flex-col text-center items-center justify-center w-[100vw] h-[100vh]">
+        <h1 className="text-[4rem] ">MENU</h1>
         <div>
-          {buttonsData.map((button) => {
-            return (
-              <button
-                onClick={(e) => {
-                  changeCategory(e.target.textContent)
-                }}
-              >
-                {button.title}
-              </button>
-            )
-          })}
+          <h3 className="text-[2rem]">Categories</h3>
+          <div className="flex flex-row text-center items-center justify-center gap-2 wrap">
+            {buttonsData.map((button, index) => {
+              return (
+                <button
+                  className="w-[75px] h-[40px] bg-zinc-500 text-white"
+                  key={index}
+                  onClick={(e) => {
+                    changeCategory(button.title)
+                  }}
+                >
+                  {button.title}
+                </button>
+              )
+            })}
+          </div>
         </div>
         <div>
           {items.map((menu, index) => {
