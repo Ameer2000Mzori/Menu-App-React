@@ -1,6 +1,6 @@
-import react from 'react'
+import Menu from './component/Menu.jsx'
 function App() {
-  return <h1>Hello World</h1>
+  return <Menu />
 }
 
 export default App
