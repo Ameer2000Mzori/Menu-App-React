@@ -37,7 +37,10 @@ const Menu = () => {
         <div>
           {items.map((menu, index) => {
             return (
-              <div key={index}>
+              <div
+                key={index}
+                className="flex flex-row text-center items-center justify-evenly w-[350px] h-[50px] bg-green-300"
+              >
                 <h1>{menu.name}</h1>
                 <p>{menu.category}</p>
               </div>
